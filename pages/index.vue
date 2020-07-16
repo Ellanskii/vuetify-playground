@@ -1,7 +1,7 @@
 <template>
-  <v-container class="block">
-   <div class="block block_modifier">
-     <div class="block-element"></div>
+  <v-container>
+   <div class="c-block c-block--modifier">
+     <div class="c-block__element"></div>
    </div>
   </v-container>
 </template>
@@ -15,6 +15,11 @@ export default {
 // @import '~sass-bem-utils/dist/sass-bem-utils';
 @import '../assets/sass-bem-utils';
 
+.block {
+  background: green;
+}
+
+// откуда блять берётся .c-block?
 @include block('block', 'component') {
   background: purple;
   display: flex;

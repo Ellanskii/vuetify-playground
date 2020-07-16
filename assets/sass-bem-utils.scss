@@ -560,7 +560,7 @@ $bem-block-namespaces: (
 /// @param {String | Arglist} $modified-elements - List of elements that should be modified
 /// @returns The final selector for the element(s) modified by the block modifier
 
-@function _modifies-element($modified-elements...) {
+@function prefix-modifies-element($modified-elements...) {
 
     $inside-check: _should-be-called-within('block', 'modifier', 'state', 'theme');
 
@@ -593,7 +593,7 @@ $bem-block-namespaces: (
 /// @param {String | Arglist} $modified-elements - Name of the element(s) that should be modified
 
 @mixin modifies-element($modified-elements...) {
-    @at-root #{_modifies-element($modified-elements...)} {
+    @at-root #{prefix-modifies-element($modified-elements...)} {
         @content;
     }
 
@@ -659,7 +659,7 @@ $bem-block-namespaces: (
 /// @param {String} $modified-element-modifier - Modifier that should be modified
 /// @returns The final selector for the element(s) modified by the modifier
 
-@function _modifies-element-modifier($context-element, $modified-element-modifier) {
+@function prefix-modifies-element-modifier($context-element, $modified-element-modifier) {
 
     $inside-check: _should-be-called-within('block', 'modifier', 'state', 'theme');
 
@@ -690,7 +690,7 @@ $bem-block-namespaces: (
 /// @param {String | Arglist} $modified-elements - Name of the element(s) that should be modified
 
 @mixin modifies-element-modifier($context-element, $modified-element-modifier) {
-    @at-root #{_modifies-element-modifier($context-element, $modified-element-modifier)} {
+    @at-root #{prefix-modifies-element-modifier($context-element, $modified-element-modifier)} {
         @content;
     }
 
