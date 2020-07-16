@@ -95,6 +95,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~sass-bem-utils/dist/sass-bem-utils'
+// @import '~sass-bem-utils/dist/sass-bem-utils';
+@import '../assets/sass-bem-utils';
 
 </style>
