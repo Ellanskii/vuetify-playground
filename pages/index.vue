@@ -93,3 +93,8 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+@import '~sass-bem-utils/dist/sass-bem-utils'
+
+</style>
